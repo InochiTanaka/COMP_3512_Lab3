@@ -7,7 +7,7 @@ class Matrix
 {
 	void set_value(int row, int col, int newVal);
 	int get_value(int row, int col);
-	void clear(int array[]);
+	Matrix clear();
 	Matrix identity();
 	bool operator==(const Matrix & mt);
 	bool operator!=(const Matrix & mt);
@@ -25,6 +25,7 @@ class Matrix
 	friend ostream& operator<<(ostream& os, const Matrix& mt);
 	Matrix operator+=(int value);
 	Matrix operator-=(int value);
+
 
 	public:
 		Matrix();
@@ -67,7 +68,7 @@ inline int Matrix::get_value(int row, int col)
 }
 
 //set all values on Matrix to 0
-inline void Matrix::clear(int array[])
+inline Matrix Matrix::clear()
 {
 	for (int i = 0; i < numRC*numRC ; i++)
 	{
