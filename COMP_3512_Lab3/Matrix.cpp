@@ -2,19 +2,67 @@
 
 int main()
 {
+	cout << "****************** Start Matrix A Program ******************"
+		<< endl
+		<< endl;
+
 	Matrix a;
-	cout << a << endl;
 
+	a.Matrix::matrixGenTester();
+
+	cout << endl 
+		<< "****************** Matrix A Program End ******************"
+		<< endl
+		<< endl;
+
+	a.Matrix::Matrix(3);
+
+
+	cout << "****************** Start Matrix B Program ******************"
+		<< endl
+		<< endl;
+	cout << "Set up Matrix B" << endl;
 	Matrix b;
-	cout << b << endl;
 
-	//int[] wrong_size= { 1,2,3 };
-	//Matrix c(wrong_size);
+	cout << "Test case : 3 x 3 Matrix" << endl;
+	b.Matrix::Matrix(3);
 
-	//b.set_value{ 0, 0, -1 };
-	//b get_value{ 0, 0 };
-	//b.clear();
+	cout << "Input Data : {11, 12, 13, 14, 15, 16, 17, 18, 19}" << endl;
+	int numList[] = { 11, 12, 13, 14, 15, 16, 17, 18, 19 };
+	b.Matrix::InsertValueFromArray(numList);
 
-	//Matrix identity = a.identity(5);
+	cout << endl
+		<< b
+		<< endl;
+
+	cout << endl
+		<< "****************** Matrix B Program End ******************"
+		<< endl
+		<< endl;
+
+	cout << "Current Matrix A :"
+		<< endl
+		<< endl;
+
+	cout << endl
+		<< a
+		<< endl
+		<< endl;
+
+	cout << "Current Matrix B :"
+		<< endl
+		<< endl;
+
+	cout << endl
+		<< b
+		<< endl
+		<< endl;
+
+	cout << "****************** Start Matrix comparing ******************";
+
+
+	a.Matrix::matrixCompTester(b);
+
 	return 0;
 };
+
